@@ -29,19 +29,30 @@ const Home = () => {
 		//LOS ESTILOS PA' LA CAJITA..
 		width: "180px", //ancho
 		height: "380px", //alto
-		border: "30px solid grey", //borde
+		border: "30px solid black", //borde
 		background: "#000000", //color de fondo
+
+		
+	};
+
+	const acme ={
+		//LOS ESTILOS PA' LA CAJITA..
+	width: "18px", //ancho
+	height: "38px", //alto
+	border: "3px solid white", //borde
+	background: "grey", //color de fondo
+
 	};
 	return (
 		//LO QUE TE MUESTA
-		<div>
-			<div>
-				<p>titl</p>
-			</div>
 
+		<div>
 			<div
 				className="d-flex flex-column mt-5 text-center mx-auto"
 				style={cajita}>
+				<div>
+					<p style={acme}>ACME</p>
+				</div>
 				<div className="col">
 					<button
 						onClick={() => greenOn()}
