@@ -31,17 +31,14 @@ const Home = () => {
 		height: "380px", //alto
 		border: "30px solid black", //borde
 		background: "#000000", //color de fondo
-
-		
 	};
 
-	const acme ={
-		//LOS ESTILOS PA' LA CAJITA..
-	width: "18px", //ancho
-	height: "38px", //alto
-	border: "3px solid white", //borde
-	background: "grey", //color de fondo
-
+	const acme = {
+		//LOS ESTILOS PA'l acme..
+		width: "120px", //ancho
+		height: "28px", //alto
+		border: "3px solid grey", //borde
+		background: "yellow", //color de fondo
 	};
 	return (
 		//LO QUE TE MUESTA
