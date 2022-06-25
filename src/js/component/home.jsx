@@ -1,58 +1,60 @@
-import React, { useState } from "react";
+import React, { useState } from "react";//pa poder usar el useState...sino cueck!
 
 //include images into your bundle
 
-//create your first component
+//create your first component...pa' combiar el Estate
 const Home = () => {
-	const [isGreen, setIsGreen] = useState(false);
-	const [isYellow, setIsYellow] = useState(false);
-	const [isRed, setIsRed] = useState(false);
-	const encenderVerde = () => {
-		setIsVerde(true);
-		setIsAmarillo(false);
-		setIsRojo(false);
+	const [isGreen, setIsGreen] = useState(false);//el verde cambia
+	const [isYellow, setIsYellow] = useState(false);//cambia el amarelo
+	const [isRed, setIsRed] = useState(false);//y cambia el rojito
+
+
+	const greenOn = () => {//pa' cabiare e verde
+		setIsGreen(true);//com le dice que es true cambia y taran!!!PRENDE
+		setIsYellow(false);//Y COMO ACA ES FALSE SE QUEDA QUIETITO
+		setIsRed(false);//LO MISMO...
 	};
 
-	const encenderAmarillo = () => {
-		setIsVerde(false);
-		setIsAmarillo(true);
-		setIsRojo(false);
+	const yellowOn = () => {
+		setIsGreen(false);
+		setIsYellow(true);
+		setIsRed(false);
 	};
-	const encenderRojo = () => {
-		setIsVerde(false);
-		setIsAmarillo(false);
-		setIsRojo(true);
+	const redOn = () => {
+		setIsGreen(false);
+		setIsYellow(false);
+		setIsRed(true);
 	};
-	const rectangulo = {
-		width: "180px",
-		height: "380px",
-		border: "4px solid blak",
-		background: "#000000",
+	const cajita = {//LOS ESTILOS PA' LA CAJITA..
+		width: "180px",//ancho
+		height: "380px",//alto
+		border: "4px solid blak",//borde
+		background: "#000000",//color de fondo
 	};
-	return (
+	return (//LO QUE TE MUESTA
 		<div>
 			<div
 				className="d-flex flex-column mt-5 text-center mx-auto"
-				style={rectangulo}>
+				style={cajita}>
 				<div className="col">
 					<button
-						onClick={() => encenderVerde()}
+						onClick={() => greenOn()}
 						className={`${
-							isVerde === true ? "bg-success" : ""
+							isGreen === true ? "bg-success" : ""
 						} rounded-circle p-5 `}></button>
 				</div>
 				<div className="col">
 					<button
-						onClick={() => encenderAmarillo()}
+						onClick={() => yellowOn()}
 						className={`${
-							isAmarillo === true ? "bg-warning" : ""
+							isYellow === true ? "bg-warning" : ""
 						} rounded-circle p-5`}></button>
 				</div>
 				<div className="col">
 					<button
-						onClick={() => encenderRojo()}
+						onClick={() => redOn()}
 						className={`${
-							isRojo === true ? "bg-danger" : ""
+							isRed === true ? "bg-danger" : ""
 						} rounded-circle p-5`}></button>
 				</div>
 			</div>
